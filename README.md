@@ -1,6 +1,3 @@
-Here's an updated version of your README that reflects the recent changes we've made to the Enterprise API Request Tester:
-
-```markdown
 # Enterprise API Request Tester 🚀
 
 ![Enterprise API Request Tester](finished_ui.PNG)
