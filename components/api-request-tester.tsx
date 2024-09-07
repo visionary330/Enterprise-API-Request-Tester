@@ -656,6 +656,30 @@ export function ApiRequestTester() {
                   <h3 className="font-semibold text-blue-700">Deployment</h3>
                   <p className="text-gray-700">The application is designed to be easily deployable on Vercel, taking advantage of their seamless integration with Next.js projects.</p>
                 </div>
+                <div className="bg-gradient-to-r from-blue-50 to-green-50 p-4 rounded-md transition-all duration-300 hover:shadow-md">
+        <h3 className="font-semibold text-blue-700">CORS-Friendly Proxy Implementation</h3>
+        <p className="text-gray-700">A custom server-side proxy has been implemented using Next.js API routes to handle CORS issues. This allows seamless testing of various APIs regardless of their CORS settings, enhancing the tool's versatility.</p>
+      </div>
+
+      <div className="bg-gradient-to-r from-blue-50 to-green-50 p-4 rounded-md transition-all duration-300 hover:shadow-md">
+        <h3 className="font-semibold text-blue-700">Real-World Sample Requests</h3>
+        <p className="text-gray-700">The "Load Sample" functionality now uses real, functional APIs from JSONPlaceholder. This provides users with practical examples for testing different HTTP methods with actual API responses.</p>
+      </div>
+
+      <div className="bg-gradient-to-r from-blue-50 to-green-50 p-4 rounded-md transition-all duration-300 hover:shadow-md">
+        <h3 className="font-semibold text-blue-700">Enhanced Error Handling</h3>
+        <p className="text-gray-700">Comprehensive error handling has been implemented throughout the application, including detailed error messages and improved console logging. This makes debugging and troubleshooting more efficient for users.</p>
+      </div>
+
+      <div className="bg-gradient-to-r from-blue-50 to-green-50 p-4 rounded-md transition-all duration-300 hover:shadow-md">
+        <h3 className="font-semibold text-blue-700">Request Timeout Management</h3>
+        <p className="text-gray-700">A timeout mechanism has been added to prevent long-running requests from hanging indefinitely. This improves the overall reliability and user experience when dealing with slow or unresponsive endpoints.</p>
+      </div>
+
+      <div className="bg-gradient-to-r from-blue-50 to-green-50 p-4 rounded-md transition-all duration-300 hover:shadow-md">
+        <h3 className="font-semibold text-blue-700">Next.js App Router Integration</h3>
+        <p className="text-gray-700">The project structure has been updated to fully utilize Next.js 13+ App Router, improving performance and enabling more efficient server-side rendering and API route handling.</p>
+      </div>
               </div>
             </AccordionContent>
           </AccordionItem>
