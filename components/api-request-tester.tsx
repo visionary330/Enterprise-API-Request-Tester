@@ -156,13 +156,13 @@ export function ApiRequestTester() {
   const sendRequest = async () => {
     setError('')
     setResponse('')
-
+  
     if (!validateInput()) {
       return
     }
-
+  
     setIsLoading(true)
-
+  
     try {
       const headerObject = headers.reduce((acc, header) => {
         if (header.key && header.value) {
@@ -170,21 +170,32 @@ export function ApiRequestTester() {
         }
         return acc
       }, {} as Record<string, string>)
-
+  
       if (authType === 'bearer') {
         headerObject['Authorization'] = `Bearer ${bearerToken}`
       } else if (authType === 'basic') {
         headerObject['Authorization'] = `Basic ${btoa(`${username}:${password}`)}`
       }
-
-      const response = await fetch(url, {
-        method,
-        headers: headerObject,
-        body: ['GET', 'HEAD'].includes(method) ? null : body,
+  
+      const response = await fetch('/api/proxy', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          url,
+          method,
+          headers: headerObject,
+          body: ['GET', 'HEAD'].includes(method) ? null : body,
+        }),
       })
-
-      const responseText = await response.text()
-      setResponse(responseText)
+  
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`)
+      }
+  
+      const { data } = await response.json()
+      setResponse(data)
       setShowRawResponse(true)
       
       toast.success('Request sent successfully! 🚀')
@@ -195,7 +206,7 @@ export function ApiRequestTester() {
       setIsLoading(false)
     }
   }
-
+  
   const saveRequest = () => {
     if (!currentRequestName.trim()) {
       toast.error('Please enter a name for the request 📝')
