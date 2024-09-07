@@ -41,8 +41,8 @@ const methodExplanations: Record<RequestMethod, string> = {
   POST: `POST is used to send data to a server to create/update a resource. The data sent to the server is stored in the request body of the HTTP request.`,
   PUT: `PUT is used to send data to a server to create/update a resource. PUT requests are idempotent, meaning multiple identical requests should have the same effect as a single request.`,
   DELETE: `DELETE is used to delete the specified resource. DELETE requests are idempotent.`,
-  PATCH: `PATCH is used to apply partial modifications to a resource. It's non-idempotent and used to make partial changes to an existing resource.`,
-  HEAD: `HEAD is almost identical to GET, but without the response body. It's useful for checking what a GET request will return before actually making a GET request.`,
+  PATCH: `PATCH is used to apply partial modifications to a resource. It&apos;s non-idempotent and used to make partial changes to an existing resource.`,
+  HEAD: `HEAD is almost identical to GET, but without the response body. It&apos;s useful for checking what a GET request will return before actually making a GET request.`,
   OPTIONS: `OPTIONS is used to describe the communication options for the target resource. It can be used to determine the capabilities of a web server.`
 }
 
@@ -293,7 +293,7 @@ export function ApiRequestTester() {
             className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 bg-white rounded-lg shadow-lg p-6 max-w-md"
           >
             <h2 className="text-xl font-bold mb-2">Disclaimer ⚠️</h2>
-            <p className="mb-4">This tool is for educational purposes only. Be cautious when testing APIs, especially those you don't own or have permission to access.</p>
+            <p className="mb-4">This tool is for educational purposes only. Be cautious when testing APIs, especially those you don&apos;t own or have permission to access.</p>
             <Button onClick={() => setShowDisclaimer(false)} className="bg-blue-500 hover:bg-blue-600 text-white transition-colors duration-300">
               I Understand
             </Button>
@@ -558,7 +558,7 @@ export function ApiRequestTester() {
               <div className="space-y-4">
                 <div className="bg-gradient-to-r from-blue-50 to-green-50 p-4 rounded-md transition-all duration-300 hover:shadow-md">
                   <h3 className="font-semibold text-blue-700">How do I send a POST request with JSON data?</h3>
-                  <p className="text-gray-700">Select POST as the method, add a header with key "Content-Type" and value "application/json", then enter your JSON data in the Body tab.</p>
+                  <p className="text-gray-700">Select POST as the method, add a header with key &quot;Content-Type&quot; and value &quot;application/json&quot;, then enter your JSON data in the Body tab.</p>
                 </div>
                 <div className="bg-gradient-to-r from-blue-50 to-green-50 p-4 rounded-md transition-all duration-300 hover:shadow-md">
                   <h3 className="font-semibold text-blue-700">Can I test authenticated APIs?</h3>
@@ -566,11 +566,11 @@ export function ApiRequestTester() {
                 </div>
                 <div className="bg-gradient-to-r from-blue-50 to-green-50 p-4 rounded-md transition-all duration-300 hover:shadow-md">
                   <h3 className="font-semibold text-blue-700">How do I save a request for later use?</h3>
-                  <p className="text-gray-700">Enter a name for your request in the input field next to the "Save" button, then click "Save". You can access saved requests in the "Saved Requests" section.</p>
+                  <p className="text-gray-700">Enter a name for your request in the input field next to the &quot;Save&quot; button, then click &quot;Save&quot;. You can access saved requests in the &quot;Saved Requests&quot; section.</p>
                 </div>
                 <div className="bg-gradient-to-r from-blue-50 to-green-50 p-4 rounded-md transition-all duration-300 hover:shadow-md">
                   <h3 className="font-semibold text-blue-700">Why am I seeing HTML in the response?</h3>
-                  <p className="text-gray-700">If you're seeing HTML in the response, it's likely that the API you're trying to access is returning a web page instead of raw data. This could be due to CORS restrictions or the API not being set up to handle requests from a browser directly. For testing purposes, you might need to use a server-side proxy or a CORS-enabled API.</p>
+                  <p className="text-gray-700">If you&apos;re seeing HTML in the response, it&apos;s likely that the API you&apos;re trying to access is returning a web page instead of raw data. This could be due to CORS restrictions or the API not being set up to handle requests from a browser directly. For testing purposes, you might need to use a server-side proxy or a CORS-enabled API.</p>
                 </div>
               </div>
             </AccordionContent>
@@ -589,13 +589,13 @@ export function ApiRequestTester() {
                 </div>
                 <div className="bg-gradient-to-r from-blue-50 to-green-50 p-4 rounded-md transition-all duration-300 hover:shadow-md">
                   <h3 className="font-semibold text-blue-700">State Management</h3>
-                  <p className="text-gray-700">React's useState and useEffect hooks are used for local state management and side effects. This approach keeps the application simple and avoids the need for complex state management libraries.</p>
+                  <p className="text-gray-700">React&apos;s useState and useEffect hooks are used for local state management and side effects. This approach keeps the application simple and avoids the need for complex state management libraries.</p>
                 </div>
                 <div className="bg-gradient-to-r from-blue-50 to-green-50 p-4 rounded-md transition-all duration-300 hover:shadow-md">
                   <h3 className="font-semibold text-blue-700">API Requests</h3>
                   <p className="text-gray-700">The Fetch API is used to make HTTP requests. This native browser API provides a powerful and flexible way to send requests and handle responses.</p>
                 </div>
-                <div className="bg-gradient-to-r from-blue-50 to-green-50 p-4 rounded-md transition-all duration-300 hover:shadow-md">
+                <div className="bg-gradient-to-r from-blue-50 to-green-50 p-4 rounded-md transition-all duration-300 hover:shadow-m">
                   <h3 className="font-semibold text-blue-700">Data Persistence</h3>
                   <p className="text-gray-700">LocalStorage is used to persist saved requests. This allows users to maintain their saved requests across browser sessions without the need for a backend database.</p>
                 </div>
@@ -603,7 +603,7 @@ export function ApiRequestTester() {
                   <h3 className="font-semibold text-blue-700">Animations</h3>
                   <p className="text-gray-700">Framer Motion is integrated for smooth, physics-based animations. This enhances the user experience by providing visual feedback for actions and state changes.</p>
                 </div>
-                <div className="bg-gradient-to-r from-blue-50 to-green-50 p-4 rounded-md transition-all duration-300 hover:shadow-m">
+                <div className="bg-gradient-to-r from-blue-50 to-green-50 p-4 rounded-md transition-all duration-300 hover:shadow-md">
                   <h3 className="font-semibold text-blue-700">Notifications</h3>
                   <p className="text-gray-700">React Hot Toast is used for displaying toast notifications. This provides a non-intrusive way to give feedback to users about the success or failure of their actions.</p>
                 </div>
@@ -613,11 +613,11 @@ export function ApiRequestTester() {
                 </div>
                 <div className="bg-gradient-to-r from-blue-50 to-green-50 p-4 rounded-md transition-all duration-300 hover:shadow-md">
                   <h3 className="font-semibold text-blue-700">Handling Multiple Users</h3>
-                  <p className="text-gray-700">While this application doesn't have a traditional backend, it supports multiple users by storing data in the browser's localStorage. Each user's saved requests are isolated to their own browser, ensuring privacy and separation of data.</p>
+                  <p className="text-gray-700">While this application doesn&apos;t have a traditional backend, it supports multiple users by storing data in the browser&apos;s localStorage. Each user&apos;s saved requests are isolated to their own browser, ensuring privacy and separation of data.</p>
                 </div>
                 <div className="bg-gradient-to-r from-blue-50 to-green-50 p-4 rounded-md transition-all duration-300 hover:shadow-md">
-                  <h3 className="font-semibold text-blue-700">"Backend of the Frontend"</h3>
-                  <p className="text-gray-700">The application leverages Next.js API routes to create a "backend for the frontend". This allows for server-side operations like request proxying or data processing without needing a separate backend server. However, in this specific implementation, all operations are client-side for simplicity and educational purposes.</p>
+                  <h3 className="font-semibold text-blue-700">&quot;Backend of the Frontend&quot;</h3>
+                  <p className="text-gray-700">The application leverages Next.js API routes to create a &quot;backend for the frontend&quot;. This allows for server-side operations like request proxying or data processing without needing a separate backend server. However, in this specific implementation, all operations are client-side for simplicity and educational purposes.</p>
                 </div>
                 <div className="bg-gradient-to-r from-blue-50 to-green-50 p-4 rounded-md transition-all duration-300 hover:shadow-md">
                   <h3 className="font-semibold text-blue-700">TypeScript</h3>

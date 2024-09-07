@@ -1,6 +1,6 @@
 # Enterprise API Request Tester 🚀
 
-![Enterprise API Request Tester](https://your-image-url.com/project-screenshot.png)
+![Enterprise API Request Tester](finished_ui.PNG)
 
 ## Table of Contents
 - [Overview](#overview)
@@ -28,7 +28,6 @@ The Enterprise API Request Tester is a powerful, user-friendly tool designed for
 - **Request Saving**: Save and manage frequently used API requests.
 - **Import/Export**: Share your API collections with team members.
 - **Sample Requests**: Quick-load sample requests to get started instantly.
-- **Dark Mode**: Eye-friendly dark theme for late-night coding sessions.
 - **Responsive Design**: Seamless experience across desktop and mobile devices.
 
 ## Tech Stack
@@ -100,10 +99,6 @@ Contributions are what make the open-source community such an amazing place to l
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-## License
-
-Distributed under the MIT License. See `LICENSE` for more information.
-
 ## Contact
 
 Sunny Patel - sunnypatel124555@gmail.com
@@ -112,4 +107,4 @@ Project Link: [https://github.com/your-username/enterprise-api-request-tester](h
 
 ---
 
-Made with ❤️ by [Sunny Patel](https://www.sunnypatel.net/)
+Made by [Sunny Patel](https://www.sunnypatel.net/)
