@@ -658,12 +658,12 @@ export function ApiRequestTester() {
                 </div>
                 <div className="bg-gradient-to-r from-blue-50 to-green-50 p-4 rounded-md transition-all duration-300 hover:shadow-md">
         <h3 className="font-semibold text-blue-700">CORS-Friendly Proxy Implementation</h3>
-        <p className="text-gray-700">A custom server-side proxy has been implemented using Next.js API routes to handle CORS issues. This allows seamless testing of various APIs regardless of their CORS settings, enhancing the tool's versatility.</p>
+        <p className="text-gray-700">A custom server-side proxy has been implemented using Next.js API routes to handle CORS issues. This allows seamless testing of various APIs regardless of their CORS settings, enhancing the tool&apos;s versatility.</p>
       </div>
 
       <div className="bg-gradient-to-r from-blue-50 to-green-50 p-4 rounded-md transition-all duration-300 hover:shadow-md">
         <h3 className="font-semibold text-blue-700">Real-World Sample Requests</h3>
-        <p className="text-gray-700">The "Load Sample" functionality now uses real, functional APIs from JSONPlaceholder. This provides users with practical examples for testing different HTTP methods with actual API responses.</p>
+        <p className="text-gray-700">The &quot;Load Sample&quot; functionality now uses real, functional APIs from JSONPlaceholder. This provides users with practical examples for testing different HTTP methods with actual API responses.</p>
       </div>
 
       <div className="bg-gradient-to-r from-blue-50 to-green-50 p-4 rounded-md transition-all duration-300 hover:shadow-md">
@@ -680,7 +680,7 @@ export function ApiRequestTester() {
         <h3 className="font-semibold text-blue-700">Next.js App Router Integration</h3>
         <p className="text-gray-700">The project structure has been updated to fully utilize Next.js 13+ App Router, improving performance and enabling more efficient server-side rendering and API route handling.</p>
       </div>
-              </div>
+                    </div>
             </AccordionContent>
           </AccordionItem>
         </Accordion>
