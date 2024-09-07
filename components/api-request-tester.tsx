@@ -13,7 +13,7 @@ import { Switch } from "@/components/ui/switch"
 import { Label } from "@/components/ui/label"
 import { ScrollArea } from "@/components/ui/scroll-area"
 import { Toaster, toast } from 'react-hot-toast'
-import { Send, Save, Download, Upload, Plus, Trash2, AlertCircle, Github, Linkedin, Globe, Info } from 'lucide-react'
+import { Send, Save, Download, Upload, Plus, Trash2, AlertCircle, Github, Linkedin, Globe } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
 
 type RequestMethod = 'GET' | 'POST' | 'PUT' | 'DELETE' | 'PATCH' | 'HEAD' | 'OPTIONS'
@@ -93,7 +93,7 @@ const sampleRequests: Record<RequestMethod, { url: string, headers: Header[], bo
   }
 }
 
-export function ApiRequestTester() {
+export default function ApiRequestTester() {
   const [url, setUrl] = useState('')
   const [method, setMethod] = useState<RequestMethod>('GET')
   const [headers, setHeaders] = useState<Header[]>([{ key: '', value: '' }])
