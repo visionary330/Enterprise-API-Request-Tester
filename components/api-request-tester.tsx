@@ -189,7 +189,7 @@ export function ApiRequestTester() {
       
       toast.success('Request sent successfully! 🚀')
     } catch (err) {
-      setError(err.message)
+      setError((err as Error).message)
       toast.error('Failed to send request 😕')
     } finally {
       setIsLoading(false)
