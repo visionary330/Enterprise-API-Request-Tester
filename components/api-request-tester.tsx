@@ -48,46 +48,46 @@ const methodExplanations: Record<RequestMethod, string> = {
 
 const sampleRequests: Record<RequestMethod, { url: string, headers: Header[], body: string }> = {
   GET: {
-    url: 'https://api.example.com/users',
+    url: 'https://jsonplaceholder.typicode.com/posts/1',
     headers: [{ key: 'Accept', value: 'application/json' }],
     body: ''
   },
   POST: {
-    url: 'https://api.example.com/users',
+    url: 'https://jsonplaceholder.typicode.com/posts',
     headers: [
       { key: 'Content-Type', value: 'application/json' },
       { key: 'Accept', value: 'application/json' }
     ],
-    body: JSON.stringify({ name: 'John Doe', email: 'john@example.com' }, null, 2)
+    body: JSON.stringify({ title: 'foo', body: 'bar', userId: 1 }, null, 2)
   },
   PUT: {
-    url: 'https://api.example.com/users/1',
+    url: 'https://jsonplaceholder.typicode.com/posts/1',
     headers: [
       { key: 'Content-Type', value: 'application/json' },
       { key: 'Accept', value: 'application/json' }
     ],
-    body: JSON.stringify({ name: 'John Doe Updated', email: 'john_updated@example.com' }, null, 2)
+    body: JSON.stringify({ id: 1, title: 'foo', body: 'bar', userId: 1 }, null, 2)
   },
   DELETE: {
-    url: 'https://api.example.com/users/1',
+    url: 'https://jsonplaceholder.typicode.com/posts/1',
     headers: [{ key: 'Accept', value: 'application/json' }],
     body: ''
   },
   PATCH: {
-    url: 'https://api.example.com/users/1',
+    url: 'https://jsonplaceholder.typicode.com/posts/1',
     headers: [
       { key: 'Content-Type', value: 'application/json' },
       { key: 'Accept', value: 'application/json' }
     ],
-    body: JSON.stringify({ email: 'john_new@example.com' }, null, 2)
+    body: JSON.stringify({ title: 'Updated Title' }, null, 2)
   },
   HEAD: {
-    url: 'https://api.example.com/users',
+    url: 'https://jsonplaceholder.typicode.com/posts/1',
     headers: [],
     body: ''
   },
   OPTIONS: {
-    url: 'https://api.example.com/users',
+    url: 'https://jsonplaceholder.typicode.com/posts',
     headers: [],
     body: ''
   }
@@ -177,6 +177,13 @@ export function ApiRequestTester() {
         headerObject['Authorization'] = `Basic ${btoa(`${username}:${password}`)}`
       }
   
+      console.log('Sending request to proxy:', {
+        url,
+        method,
+        headers: headerObject,
+        body: ['GET', 'HEAD'].includes(method) ? null : body,
+      })
+  
       const response = await fetch('/api/proxy', {
         method: 'POST',
         headers: {
@@ -190,23 +197,32 @@ export function ApiRequestTester() {
         }),
       })
   
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`)
-      }
+      const responseData = await response.json()
+      console.log('Response from proxy:', responseData)
   
-      const { data } = await response.json()
-      setResponse(data)
-      setShowRawResponse(true)
-      
-      toast.success('Request sent successfully! 🚀')
+      if (response.ok) {
+        setResponse(JSON.stringify(responseData, null, 2))
+        setShowRawResponse(true)
+        toast.success('Request sent successfully! 🚀')
+      } else {
+        const errorMessage = responseData.error || `HTTP error! status: ${response.status}`
+        setError(errorMessage)
+        setResponse(JSON.stringify(responseData, null, 2))
+        setShowRawResponse(true)
+        toast.error(`Failed to send request: ${errorMessage}`)
+      }
     } catch (err) {
-      setError((err as Error).message)
-      toast.error('Failed to send request 😕')
+      const errorMessage = err instanceof Error ? err.message : 'An unknown error occurred'
+      console.error('Error in sendRequest:', errorMessage)
+      setError(errorMessage)
+      setResponse(JSON.stringify({ error: errorMessage }, null, 2))
+      setShowRawResponse(true)
+      toast.error(`Failed to send request: ${errorMessage}`)
     } finally {
       setIsLoading(false)
     }
   }
-  
+
   const saveRequest = () => {
     if (!currentRequestName.trim()) {
       toast.error('Please enter a name for the request 📝')
@@ -288,7 +304,9 @@ export function ApiRequestTester() {
     const sample = sampleRequests[method]
     setUrl(sample.url)
     setHeaders(sample.headers)
-    setBody(sample.body)
+    if (sample.body) {
+      setBody(sample.body)
+    }
     toast.success('Sample request loaded! 🧪')
   }
 
