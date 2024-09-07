@@ -293,7 +293,7 @@ export default function ApiRequestTester() {
             className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 bg-white rounded-lg shadow-lg p-6 max-w-md"
           >
             <h2 className="text-xl font-bold mb-2">Disclaimer ⚠️</h2>
-            <p className="mb-4">This tool is for educational purposes only. Be cautious when testing APIs, especially those you don't own or have permission to access.</p>
+            <p className="mb-4">This tool is for educational purposes only. Be cautious when testing APIs, especially those you don&apos;t own or have permission to access.</p>
             <Button onClick={() => setShowDisclaimer(false)} className="bg-blue-500 hover:bg-blue-600 text-white transition-colors duration-300">
               I Understand
             </Button>
@@ -558,7 +558,7 @@ export default function ApiRequestTester() {
               <div className="space-y-4">
                 <div className="bg-gradient-to-r from-blue-50 to-green-50 p-4 rounded-md transition-all duration-300 hover:shadow-md">
                   <h3 className="font-semibold text-blue-700">How do I send a POST request with JSON data?</h3>
-                  <p className="text-gray-700">Select POST as the method, add a header with key "Content-Type" and value "application/json", then enter your JSON data in the Body tab.</p>
+                  <p className="text-gray-700">Select POST as the method, add a header with key &quot;Content-Type&quot; and value &quot;application/json&quot;, then enter your JSON data in the Body tab.</p>
                 </div>
                 <div className="bg-gradient-to-r from-blue-50 to-green-50 p-4 rounded-md transition-all duration-300 hover:shadow-md">
                   <h3 className="font-semibold text-blue-700">Can I test authenticated APIs?</h3>
