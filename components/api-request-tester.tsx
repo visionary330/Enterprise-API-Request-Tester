@@ -310,14 +310,6 @@ export function ApiRequestTester() {
           <h1 className="text-4xl font-bold text-black">
             Enterprise API Request Tester 🚀
           </h1>
-          <Button
-            variant="outline"
-            size="icon"
-            onClick={() => toast.info('This tool allows you to test API endpoints with various HTTP methods and parameters. 🛠️')}
-            className="hover:bg-blue-100 transition-colors duration-300"
-          >
-            <Info className="h-6 w-6" />
-          </Button>
         </div>
         <div className="space-y-6">
           <div className="flex gap-2">
@@ -643,7 +635,7 @@ export function ApiRequestTester() {
           <p>© 2024 Sunny Patel - sunnypatel124555@gmail.com</p>
           <p className="mt-2 text-xs">This web project is protected by copyright. You may not copy, modify, or distribute this work without explicit permission from the author.</p>
           <div className="flex justify-center space-x-4 mt-4">
-            <a href="https://github.com/sunnypatell" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/sunnypatell/enterprise-api-request-tester" target="_blank" rel="noopener noreferrer">
               <Button variant="outline" size="icon" className="bg-white hover:bg-blue-100 transition-colors duration-300">
                 <Github className="h-4 w-4" />
               </Button>

@@ -1,36 +1,115 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Enterprise API Request Tester 🚀
+
+![Enterprise API Request Tester](https://your-image-url.com/project-screenshot.png)
+
+## Table of Contents
+- [Overview](#overview)
+- [Features](#features)
+- [Tech Stack](#tech-stack)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
+
+## Overview
+
+The Enterprise API Request Tester is a powerful, user-friendly tool designed for developers, QA engineers, and API enthusiasts. It allows users to easily construct, send, and analyze HTTP requests to any API endpoint. With a sleek interface and robust functionality, this tool streamlines the process of API testing and exploration.
+
+## Features
+
+- **Multiple HTTP Methods**: Support for GET, POST, PUT, DELETE, PATCH, HEAD, and OPTIONS.
+- **Custom Headers**: Add and modify request headers with ease.
+- **Request Body Editor**: Built-in editor for crafting JSON request bodies.
+- **Authentication Support**: Includes options for Bearer Token and Basic Auth.
+- **Response Viewer**: Clear display of API responses with options for raw and formatted views.
+- **Request Saving**: Save and manage frequently used API requests.
+- **Import/Export**: Share your API collections with team members.
+- **Sample Requests**: Quick-load sample requests to get started instantly.
+- **Dark Mode**: Eye-friendly dark theme for late-night coding sessions.
+- **Responsive Design**: Seamless experience across desktop and mobile devices.
+
+## Tech Stack
+
+- **Frontend Framework**: React with Next.js
+- **UI Components**: shadcn/ui
+- **Styling**: Tailwind CSS
+- **State Management**: React Hooks (useState, useEffect)
+- **HTTP Requests**: Fetch API
+- **Animations**: Framer Motion
+- **Notifications**: React Hot Toast
+- **Icons**: Lucide React
+- **Language**: TypeScript
+- **Deployment**: Vercel-ready
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- Node.js (v14.0.0 or later)
+- npm or yarn
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Installation
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/enterprise-api-request-tester.git
+   ```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+2. Navigate to the project directory:
+   ```bash
+   cd enterprise-api-request-tester
+   ```
 
-## Learn More
+3. Install dependencies:
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
 
-To learn more about Next.js, take a look at the following resources:
+4. Start the development server:
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+5. Open [http://localhost:3000](http://localhost:3000) in your browser to see the application.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Usage
 
-## Deploy on Vercel
+1. **Select HTTP Method**: Choose from GET, POST, PUT, DELETE, PATCH, HEAD, or OPTIONS.
+2. **Enter URL**: Input the API endpoint URL you want to test.
+3. **Add Headers**: (Optional) Add any custom headers required for your request.
+4. **Add Body**: (Optional) For methods like POST or PUT, add a JSON body to your request.
+5. **Set Authentication**: (Optional) Configure Bearer Token or Basic Auth if required.
+6. **Send Request**: Click the "Send Request" button to make the API call.
+7. **View Response**: Analyze the API response in the response viewer.
+8. **Save Request**: (Optional) Save your request for future use.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Contributing
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## License
+
+Distributed under the MIT License. See `LICENSE` for more information.
+
+## Contact
+
+Sunny Patel - sunnypatel124555@gmail.com
+
+Project Link: [https://github.com/your-username/enterprise-api-request-tester](https://github.com/your-username/enterprise-api-request-tester)
+
+---
+
+Made with ❤️ by [Sunny Patel](https://www.sunnypatel.net/)
