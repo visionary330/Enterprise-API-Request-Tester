@@ -35,13 +35,13 @@ The Enterprise API Request Tester is a powerful, user-friendly tool designed for
 
 ## Tech Stack 🛠️
 
-- **Frontend Framework**: React with Next.js (App Router) ⚛️
+- **Frontend Framework**: Typescript with Next.js (App Router) ⚛️
 - **UI Components**: shadcn/ui 🎨
 - **Styling**: Tailwind CSS 💅
-- **State Management**: React Hooks (useState, useEffect) 🎣
+- **State Management**: WebHooks (useState, useEffect) 🎣
 - **HTTP Requests**: Fetch API with custom proxy implementation 🌐
 - **Animations**: Framer Motion 🎬
-- **Notifications**: React Hot Toast 🍞
+- **Notifications**: Hot Toast 🍞
 - **Icons**: Lucide React 🖼️
 - **Language**: TypeScript 📘
 - **Deployment**: Vercel-ready 🚀
