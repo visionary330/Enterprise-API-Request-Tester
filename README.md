@@ -57,7 +57,7 @@ The Enterprise API Request Tester is a powerful, user-friendly tool designed for
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/enterprise-api-request-tester.git
+   git clone https://github.com/visionary330/Enterprise-API-Request-Tester
 ```
 
 2. Navigate to the project directory:
@@ -116,10 +116,10 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## Contact 📬
 
-Sunny Patel - [sunnypatel124555@gmail.com](mailto:sunnypatel124555@gmail.com)
+Ryan Lee - [xlogic.foundry@gmail.com](mailto:xlogic.foundry@gmail.com)
 
 Project Link: [https://github.com/your-username/enterprise-api-request-tester](https://github.com/your-username/enterprise-api-request-tester)
 
 ---
 
-Made by [Sunny Patel](https://www.sunnypatel.net/)
+Made by [Ryan Lee](https://www.ryanlee.net/)
